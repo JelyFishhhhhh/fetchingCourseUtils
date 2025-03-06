@@ -1,0 +1,5 @@
+aiofiles==24.1.0
+beautifulsoup4==4.13.3
+orjson==3.10.15
+pydantic==2.10.6
+requests==2.31.0
