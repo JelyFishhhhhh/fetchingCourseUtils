@@ -40,5 +40,8 @@ async def main():
     
 
 if __name__ == "__main__":
-       
+    if not os.path.exists("./info.json"):
+        with open("./info.json", "w") as f:
+            json.dump({"url": ""}, f)
+        print("打開info.json並自行填入url(http://.../javaprog/)")
     run(main())
