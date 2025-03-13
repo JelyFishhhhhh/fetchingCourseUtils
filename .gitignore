@@ -134,3 +134,6 @@ info.json
 results/
 
 *.java
+*.class
+*.form
+*.txt

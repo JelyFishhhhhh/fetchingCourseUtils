@@ -1,0 +1,126 @@
+Java¤¤static¡Bthis¡Bsuper¡Bfinal¥ÎªkÂ²½Í(³ü)
+
+¥»½g¦®¦bÀ°§U·Ç³Æ¾Ç²ßJava¥H¤Î­è±µÄ²JavaªºªB¤Í»{ÃÑ¡B´x´¤©M¨Ï¥Îstatic¡Bthis¡Bsuper¡Bfinal³o´X­ÓÃöÁä¦rªº¨Ï¥Î¡CJava³Õ¤jºë²`¡A§Ú¤]¬O³ü¦ì¥¿¦b¾Ç²ß©M¨Ï¥ÎJavaªº·R¦nªÌ¡A¤å¤¤Ãø§K¦³¤£§´¤§³B¡AÅwªï«ü¥¿¡C
+
+³ü¡Bstatic
+½Ð¥ý¬Ý¤U­±³o¬qµ{§Ç¡G
+
+public class Hello{
+public static void main(String[] args){ //(1)
+System.out.println("Hello,world!"); //(2)
+}
+}
+
+¬Ý¹L³o¬qµ{§Ç¡A¹ï©ó¤j¦h¼Æ¾Ç¹LJava ªº±q¨Ó»¡¡A³£¤£­¯¥Í¡C§Y¨Ï¨S¦³¾Ç¹LJava¡A¦Ó¾Ç¹L¨ä¥¦ªº°ª¯Å»y¨¥¡A¨Ò¦pC¡A¨º©p¤]À³¸Ó¯à¬ÝÀ´³o¬q¥N½Xªº·N«ä¡C¥¦¥u¬OÂ²³æªº¿é¥X¡§Hello,world¡¨¡A³üÂI§Oªº¥Î³B³£¨S¦³¡AµM¦Ó¡A¥¦«o®i¥Ü¤FstaticÃöÁä¦rªº¥D­n¥Îªk¡C 
+¦b1³B¡A§Ú­Ì©w¸q¤F³ü­ÓÀRºAªº¤èªk¦W¬°main¡A³o´N·N¨ýµÛ§i¶DJava½sÄ¶¾¹¡A§Ú³o­Ó¤èªk¤£»Ý­n³Ð«Ø³ü­Ó¦¹Ãþªº¹ï¶H§Y¥i¨Ï¥Î¡C©pÁÙ±o©p¬O«ç?¹B¦æ³o­Óµ{§Ç¶Ü¡H³ü¯ë¡A§Ú­Ì³£¬O¦b©R¥O¦æ¤U¡A¥´¤J¦p¤Uªº©R¥O(¥[¤U¹º½u¬°¤â°Ê¿é¤J)¡G
+javac Hello.java
+java Hello
+Hello,world!
+³o´N¬O©p¹B¦æªº¹Lµ{¡A²Ä³ü¦æ¥Î¨Ó½sÄ¶Hello.java³o­Ó¤å¥ó¡A°õ¦æ§¹«á¡A¦pªG©p¬d¬Ý·í«e¡A·|µo²{¦h¤F³ü­ÓHello.class¤å¥ó¡A¨º´N¬O²Ä³ü¦æ²£¥ÍªºJava¤G¶i¨î¦r¸`½X¡C²Ä¤G¦æ´N¬O°õ¦æ³ü­ÓJavaµ{§Çªº³Ì´¶¹M°µªk¡C°õ¦æµ²ªG¦p©p©Ò®Æ¡C¦b2¤¤¡A©p¥i¯à·|·Q¡A¬°¤°?­n³o¼Ë¤~¯à¿é¥X¡C¦n¡A§Ú­Ì¨Ó¤À¸Ñ³ü¤U³o±ø»y¥y¡C¡]¦pªG¨S¦³¦w¸ËJava¤åÀÉ¡A½Ð¨ìSunªº©x¤èºô¯¸ÂsÄýJ2SE API¡^­º¥ý¡ASystem¬O¦ì©ójava.lang¥]¤¤ªº³ü­Ó®Ö¤ßÃþ¡A¦pªG©p¬d¬Ý¥¦ªº©w¸q¡A©p·|µo²{¦³³o¼Ë³ü¦æ¡Gpublic static final PrintStream out;±µµÛ¦b¶i³ü¨B¡AÂIÀ»PrintStream³o­Ó¶WÃì±µ¡A¦bMETHOD­¶­±¡A©p·|¬Ý¨ì¤j¶q©w¸qªº¤èªk¡A¬d§äprintln¡A·|¦³³o¼Ë³ü¦æ¡G
+public void println(String x)¡C¦n¤F¡A²{¦b©pÀ³¸Ó©ú¥Õ¬°¤°?§Ú­Ì­n¨º¼Ë½Õ¥Î¤F¡Aout¬OSystemªº³ü­ÓÀRºAÅÜ¶q¡A©Ò¥H¥i¥Hª½±µ¨Ï¥Î¡A¦Óout©ÒÄÝªºÃþ¦³³ü­Óprintln¤èªk¡C
+
+ÀRºA¤èªk
+³q±`¡A¦b³ü­ÓÃþ¤¤©w¸q³ü­Ó¤èªk¬°static¡A¨º´N¬O»¡¡AµL»Ý¥»Ãþªº¹ï¶H§Y¥i½Õ¥Î¦¹¤èªk¡C¦p¤U©Ò¥Ü¡G
+
+class Simple{
+static void go(){
+System.out.println("Go...");
+}
+}
+public class Cal{
+public static void main(String[] args){
+Simple.go();
+}
+}
+
+½Õ¥Î³ü­ÓÀRºA¤èªk´N¬O¡§Ãþ¦W.¤èªk¦W¡¨,ÀRºA¤èªkªº¨Ï¥Î«ÜÂ²³æ¦p¤W©Ò¥Ü¡C³ü¯ë¨Ó»¡¡AÀRºA¤èªk±`±`¬°À³¥Îµ{§Ç¤¤ªº¨ä¥¦Ãþ´£¨Ñ³ü¨Ç¹ê¥Î¤u¨ã©Ò¥Î¡A¦bJavaªºÃþ®w¤¤¤j¶qªºÀRºA¤èªk¥¿¬O¥X©ó¦¹¥Øªº¦Ó©w¸qªº¡C
+ÀRºAÅÜ¶q
+ÀRºAÅÜ¶q»PÀRºA¤èªkÃþ¦ü¡C©Ò¦³¦¹Ãþ¹ê¨Ò¦@¨É¦¹ÀRºAÅÜ¶q¡A¤]´N¬O»¡¦bÃþ¸Ë¸ü®É¡A¥u¤À°t³ü¶ô¦sÀxªÅ¶¡¡A©Ò¦³¦¹Ãþªº¹ï¶H³£¥i¥H¾Þ±±¦¹¶ô¦sÀxªÅ¶¡¡A·íµM¹ï©ófinal«h¥t·í§O½×¤F¡C¬Ý¤U­±³o¬q¥N½X¡G
+class Value{
+static int c=0;
+static void inc(){
+c++;
+}
+}
+class Count{
+public static void prt(String s){
+System.out.printlnMoon;
+}
+public static void main(String[] args){
+Value v1,v2;
+v1=new Value();
+v2=new Value();
+prt("v1.c="+v1.c+" v2.c="+v2.c);
+v1.inc();
+prt("v1.c="+v1.c+" v2.c="+v2.c); 
+}
+}
+µ²ªG¦p¤U¡G
+v1.c=0 v2.c=0
+v1.c=1 v2.c=1
+¥Ñ¦¹¥i¥HÃÒ©ú¥¦­Ì¦@¨É³ü¶ô¦sÀx°Ï¡CstaticÅÜ¶q¦³ÂIÃþ¦ü©óC¤¤ªº¥þ§½ÅÜ¶qªº·§©À¡C­È±o±´°Qªº¬OÀRºAÅÜ¶qªºªì©l¤Æ°ÝÃD¡C§Ú­Ì­×§ï¤W­±ªºµ{§Ç¡G
+class Value{
+static int c=0;
+Value(){
+c=15;
+}
+Value(int i){
+c=i;
+}
+static void inc(){
+c++;
+}
+}
+class Count{
+public static void prt(String s){
+System.out.printlnMoon;
+}
+Value v=new Value(10);
+static Value v1,v2;
+static{
+prt("v1.c="+v1.c+" v2.c="+v2.c);
+v1=new Value(27);
+prt("v1.c="+v1.c+" v2.c="+v2.c);
+v2=new Value(15);
+prt("v1.c="+v1.c+" v2.c="+v2.c);
+}
+
+public static void main(String[] args){
+Count ct=new Count();
+prt("ct.c="+ct.v.c);
+prt("v1.c="+v1.c+" v2.c="+v2.c);
+v1.inc();
+prt("v1.c="+v1.c+" v2.c="+v2.c);
+prt("ct.c="+ct.v.c);
+}
+}
+
+¹B¦æµ²ªG¦p¤U¡G
+v1.c=0 v2.c=0
+v1.c=27 v2.c=27
+v1.c=15 v2.c=15
+ct.c=10
+v1.c=10 v2.c=10
+v1.c=11 v2.c=11
+ct.c=11
+³o­Óµ{§Ç®i¥Ü¤FÀRºAªì©l¤Æªº¦UºØ¯S©Ê¡C¦pªG©pªì¦¸±µÄ²Java¡Aµ²ªG¥i¯à¥O©p¦YÅå¡C¥i¯à·|¹ïstatic«á¥[¤j¬A¸¹·P¨ì§x´b¡C­º¥ý­n§i¶D©pªº¬O¡Astatic©w¸qªºÅÜ¶q·|Àu¥ý©ó¥ô¦ó¨ä¥¦«DstaticÅÜ¶q¡A¤£½×¨ä¥X²{ªº¶¶§Ç¦p¦ó¡C¥¿¦p¦bµ{§Ç¤¤©Òªí²{ªº¡AÁöµMv¥X²{¦bv1©Mv2ªº«e­±¡A¦ý¬Oµ²ªG«o¬Ov1©Mv2ªºªì©l¤Æ¦bvªº«e­±¡C¦bstatic{«á­±¸òµÛ³ü¬q¥N½X¡A³o¬O¥Î¨Ó¶i¦æÅã¦¡ªºÀRºAÅÜ¶qªì©l¤Æ¡A³o¬q¥N½X¥u·|ªì©l¤Æ³ü¦¸¡A¥B¦bÃþ³Q²Ä³ü¦¸¸Ë¸ü®É¡C¦pªG©p¯àÅªÀ´¨Ã²z¸Ñ³o¬q¥N½X¡A·|À°§U©p¹ïstaticÃöÁä¦rªº»{ÃÑ¡C¦b¯A¤Î¨ìÄ~©Óªº®É­Ô¡A·|¥ýªì©l¤Æ¤÷ÃþªºstaticÅÜ¶q¡AµM«á¬O¤lÃþªº¡A¨Ì¦¸Ãþ±À¡C«DÀRºAÅÜ¶q¤£¬O¥»¤åªº¥DÃD¡A¦b¦¹¤£°µ¸Ô²Ó°Q½×¡A½Ð°Ñ¦ÒThink in Java¤¤ªºÁ¿¸Ñ¡C
+ÀRºAÃþ
+³q±`³ü­Ó´¶³qÃþ¤£¤¹³\Án©ú¬°ÀRºAªº¡A¥u¦³³ü­Ó¤º³¡Ãþ¤~¥i¥H¡C³o®É³o­ÓÁn©ú¬°ÀRºAªº¤º³¡Ãþ¥i¥Hª½±µ§@¬°³ü­Ó´¶³qÃþ¨Ó¨Ï¥Î¡A¦Ó¤£»Ý¹ê¨Ò³ü­Ó¥~³¡Ãþ¡C¦p¤U¥N½X©Ò¥Ü¡G
+
+public class StaticCls{
+public static void main(String[] args){
+OuterCls.InnerCls oi=new OuterCls.InnerCls();
+}
+}
+class OuterCls{
+public static class InnerCls{
+InnerCls(){
+System.out.println("InnerCls");
+}
+}
+}
+
+¿é¥Xµ²ªG·|¦p©p©Ò®Æ¡G
+InnerCls
+©M´¶³qÃþ³ü¼Ë¡C¤º³¡Ãþªº¨ä¥¦¥Îªk½Ð°Ñ¾\Think in Java¤¤ªº¬ÛÃö³¹¸`¡A¦¹³B¤£§@¸Ô¸Ñ¡C 
+

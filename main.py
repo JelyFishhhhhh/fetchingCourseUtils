@@ -4,13 +4,16 @@ from bs4 import BeautifulSoup
 from asyncio import run, gather
 import json
 
-async def fetch_course_files(courseNum, url):
+avalFiles= [".java", ".class", ".txt", ".form"]
+
+async def fetch_course_files(url):
     
-    url+= f"course0{courseNum}/"
-    print(f"Fetching course {courseNum} from {url}")
+    print(f"Fetching from {url}")
     
-    course_dir = f"./course{courseNum}"
-    os.makedirs(course_dir, exist_ok=True)
+    if url.endswith("/"):
+        lastDir= url.split("/")[5:]
+        os.makedirs(os.path.join(".", *lastDir), exist_ok=True)
+        
     
     html= requests.get(url)
     
@@ -19,11 +22,17 @@ async def fetch_course_files(courseNum, url):
     files= soup.find_all("a")
     for file in files:
         href= file.get("href")
-        if href.endswith(".java"):
+        if href.endswith("/"):
+            if href.startswith("/~yien/"):
+                continue
+            await fetch_course_files(url+href)
+        elif any(href.endswith(af) for af in avalFiles):
+            lastDir= url.split("/")[5:]
+            dir= os.path.join(".", *lastDir)
             try:
                 file_response = requests.get(url + href)
                 file_response.raise_for_status()
-                with open(os.path.join(course_dir, href), "w", encoding="utf8") as f:
+                with open(os.path.join(dir, href), "w", encoding="utf8") as f:
                     f.write(file_response.text)
             except requests.RequestException as e:
                 print(f"Failed to fetch the file {href}: {e}")
@@ -35,7 +44,7 @@ async def main():
         url = info["url"]
 
     # fetch course
-    tasks = [fetch_course_files(i, url) for i in range(1, 8)]
+    tasks = [fetch_course_files(url+f"course0{i}/") for i in range(1, 8)]
     await gather(*tasks)
     
 
